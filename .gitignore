@@ -1,0 +1,10 @@
+/node_modules
+/dist
+/.tmp
+/.sass-cache
+/bower_components
+/app/roms
+/app/scripts/lib/dynamicaudio
+/app/scripts/lib/jsnes
+/lib
+.idea
