@@ -1,32 +1,33 @@
 <div id="emulator"></div>
 
 <script>
-  var nes;
-  $(function() {
-    nes = new JSNES({
-      'ui': $('#emulator').JSNESFANCYUI({
-        "Homebrew": [
-          ['Concentration Room', 'roms/croom/croom.nes'],
-          ['LJ65', 'roms/lj65/lj65.nes']
-        ],
-        "Best": [
-          ['Legendary Wings SAVE', 'roms/legendary-wings/Legendary Wings (U) [!].nes'],
-          ['Zanac SAVE', 'roms/Zanac (U) [!].nes'],
-          ['Nuts & Milk SAVE', 'roms/Nuts & Milk (J).nes'],
-          ['Contra Force', 'roms/contra-force/Contra Force (U) [!].nes'],
-          ['Kage', 'roms/kage/Kage (J) [!].nes'],
-          ['Ninja Gaiden III  BAD', 'roms/gaiden/Ninja Ryukenden III - Yomi no Hakobune (J).nes'],
-          ['Battle Toads & DG  BAD', 'roms/toads/Battletoads & Double Dragon - The Ultimate Team (U) [p1][!].nes'],
-          ['Shatterhand', 'roms/Shatterhand (U) [!].nes'],
-          ['Project Doom BAD', 'roms/Vice - Project Doom (U) [!].nes'],
-          ['Crisis Force BAD', 'roms/Crisis Force (J) [!].nes'],
-          ['Summer Carnival', 'roms/Summer Carnival _92 - Recca (J) [!].nes'],
-          ['Gun Nac BAD', 'roms/Gun-Nac (U) [!p].nes'],
-          ['Silkworm', 'roms/Silkworm (U) [!].nes'],
-          ['Castle of Dragon', 'roms/Dragon Unit (J).nes']
-        ]
-      }),
-      'swfPath': 'scripts/lib/dynamicaudio/'
-    });
-  });
+	var nes;
+	$(function() {
+		nes = new JSNES({
+			'ui': $('#emulator').JSNESFANCYUI({
+				"Homebrew": [
+					['Concentration Room', 'roms/croom/croom.nes'],
+					['LJ65', 'roms/lj65/lj65.nes']
+				],
+				"Best": [
+					['Legendary Wings SAVE', 'roms/legendary-wings/Legendary Wings (U) [!].nes'],
+					['Lion King', 'roms/Lion King, The (Mapper 4) (Unl) [!].nes'],
+					['Zanac SAVE', 'roms/Zanac (U) [!].nes'],
+					['Nuts & Milk SAVE', 'roms/Nuts & Milk (J).nes'],
+					['Contra Force', 'roms/contra-force/Contra Force (U) [!].nes'],
+					['Kage', 'roms/kage/Kage (J) [!].nes'],
+					['Ninja Gaiden III  BAD', 'roms/gaiden/Ninja Ryukenden III - Yomi no Hakobune (J).nes'],
+					['Battle Toads & DG  BAD', 'roms/toads/Battletoads & Double Dragon - The Ultimate Team (U) [p1][!].nes'],
+					['Shatterhand', 'roms/Shatterhand (U) [!].nes'],
+					['Project Doom BAD', 'roms/Vice - Project Doom (U) [!].nes'],
+					['Crisis Force BAD', 'roms/Crisis Force (J) [!].nes'],
+					['Summer Carnival', 'roms/Summer Carnival _92 - Recca (J) [!].nes'],
+					['Gun Nac BAD', 'roms/Gun-Nac (U) [!p].nes'],
+					['Silkworm', 'roms/Silkworm (U) [!].nes'],
+					['Castle of Dragon', 'roms/Dragon Unit (J).nes'],
+				]
+			}),
+			'swfPath': 'scripts/lib/dynamicaudio/'
+		});
+	});
 </script>

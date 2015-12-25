@@ -38,6 +38,9 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "jsnes": "0.0.0"
+    "jasmine-core": "^2.4.1",
+    "jsnes": "*",
+    "karma": "^0.13.16",
+    "phantomjs": "^1.9.19"
   }
 }
