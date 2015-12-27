@@ -2,6 +2,17 @@
 
 Fancy UI for [JS NES](https://github.com/bfirsh/jsnes)
 
+## Roadmap:
+- [ DONE ] Native stereo sound via HTML5 WebAudio API
+- [ DONE 50% ] Game saves/restore (save to local storage, autosave, jump to last save, save to cloud)
+- [ IN PROGRESS ] User upload selector and drag&drop ROM files via HTML5 File API
+- Keyborad keys setup dialog for both joystikcs
+- On screen joystick support with touch controls for Mobile and Tablets via NippleJS
+- Joystick support via HTML5 Gamepad API
+- Experiment with multilayer (WebRTC for screen sharing, Websockets for controls) 
+  <- latency is main concern here (pause, delay or slow down game emulation on latency degradation?)
+
+
 ## Build & development
 
 `$ npm install`
