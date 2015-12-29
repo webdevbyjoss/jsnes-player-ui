@@ -28,6 +28,12 @@ module.exports = function (grunt) {
   // Define the configuration for all the tasks
   grunt.initConfig({
 
+    // Pre-configure NES roms from local dir
+    roms: {
+      files: ['app/roms/*.nes'],
+	  dest: 'app/scripts/roms.js'
+    },
+    
     // Project settings
     yeoman: appConfig,
 
@@ -450,6 +456,7 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:server',
       'wiredep',
+	  'roms',
       'concurrent:server',
       'autoprefixer:server',
       'connect:livereload',
@@ -465,6 +472,7 @@ module.exports = function (grunt) {
   grunt.registerTask('test', [
     'clean:server',
     'wiredep',
+	'roms',
     'concurrent:test',
     'autoprefixer',
     'connect:test',
@@ -474,7 +482,8 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'wiredep',
-    'useminPrepare',
+    'roms',
+	'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
     'ngtemplates',
@@ -488,6 +497,22 @@ module.exports = function (grunt) {
     'usemin',
     'htmlmin'
   ]);
+
+  grunt.registerTask('roms', 'Collect ROMS from file system and render then into selectbox', function() {
+	  // Read files from directory
+	  var romFiles = [];
+	  var path = require('path');
+	  grunt.file.expand(grunt.config('roms.files')).forEach(function(file) {
+		  romFiles.push([
+			  path.parse(file).name,
+			  file.replace('app/', '')
+		  ]);
+	  });
+	  
+	  // Render files into selectbox
+	  var content = 'var roms = ' + JSON.stringify(romFiles);
+	  grunt.file.write(grunt.config('roms.dest'), content);
+  });
 
   grunt.registerTask('default', [
     'newer:jshint',
