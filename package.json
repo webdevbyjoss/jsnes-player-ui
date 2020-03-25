@@ -41,6 +41,6 @@
     "jasmine-core": "^2.4.1",
     "jsnes": "*",
     "karma": "^0.13.16",
-    "phantomjs": "^1.9.19"
+    "phantomjs": "^2.1.1"
   }
 }
