@@ -35,12 +35,16 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "jasmine-core": "^2.4.1",
     "jsnes": "*",
     "karma": "^0.13.16",
-    "phantomjs": "^1.9.19"
-  }
+    "phantomjs": "^1.9.19",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
