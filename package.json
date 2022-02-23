@@ -40,7 +40,7 @@
   "dependencies": {
     "jasmine-core": "^2.4.1",
     "jsnes": "*",
-    "karma": "^0.13.16",
+    "karma": "^6.3.16",
     "phantomjs": "^1.9.19"
   }
 }
